@@ -1,0 +1,17 @@
+{
+  "name": "hourly-calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hourlyCalc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "convert-hrtime": "^3.0.0",
+    "fs": "0.0.1-security",
+    "moment": "^2.27.0"
+  }
+}

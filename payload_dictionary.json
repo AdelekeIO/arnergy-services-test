@@ -1,0 +1,1250 @@
+[
+  {
+    "old_key": "InverterId",
+    "new_key": "InverterId",
+    "label": "Inverter Id",
+    "description": "Serial number of the inverter",
+    "datatype": "Integer",
+    "unit": ""
+  },
+  {
+    "old_key": "GridVoltage",
+    "new_key": "GdV",
+    "label": "Grid Voltage",
+    "description": "Voltage of the electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Float",
+    "unit": "V"
+  },
+  {
+    "old_key": "GridFrequency",
+    "new_key": "GdF",
+    "label": "Grid Frequency",
+    "description": "Frequency of the electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Float",
+    "unit": "Hz"
+  },
+  {
+    "old_key": "ACOutputVoltage",
+    "new_key": "ACOV",
+    "label": "AC Output Voltage",
+    "description": "Voltage of the AC output from the inverter",
+    "datatype": "Float",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACOutputFrequency",
+    "new_key": "ACOF",
+    "label": "AC Output Frequency",
+    "description": "Frequency of the AC output from the inverter",
+    "datatype": "Float",
+    "unit": "Hz"
+  },
+  {
+    "old_key": "ACOutputApparentPower",
+    "new_key": "ACOAP",
+    "label": "AC Output Apparent Power",
+    "description": "Apparent power of the AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "VA"
+  },
+  {
+    "old_key": "ACOutputActivePower",
+    "new_key": "ACOAT",
+    "label": "AC Output Active Power",
+    "description": "Active power of the AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "OutputLoadPercent",
+    "new_key": "OL%",
+    "label": "Output Load Percent",
+    "description": "Ratio of the current output load to the load carrying capacity of the inverter",
+    "datatype": "Integer",
+    "unit": "%"
+  },
+  {
+    "old_key": "BusVoltage",
+    "new_key": "BusV",
+    "label": "Bus Voltage",
+    "description": "Voltage level of the busbar in the inverter",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "BatteryVoltage",
+    "new_key": "BtV",
+    "label": "Battery Voltage",
+    "description": "Voltage across the battery's terminals",
+    "datatype": "Float",
+    "unit": "V"
+  },
+  {
+    "old_key": "BatteryChargingCurrent",
+    "new_key": "BtCgA",
+    "label": "Battery Charging Current",
+    "description": "Current being supplied to the battery",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "BatteryCapacity",
+    "new_key": "BtCp",
+    "label": "Battery Capacity",
+    "description": "Capacity of the battery",
+    "datatype": "Integer",
+    "unit": "%"
+  },
+  {
+    "old_key": "InverterHeatSinkTemp",
+    "new_key": "IvHST",
+    "label": "Inverter Heat Sink Temperature",
+    "description": "Temperature of the heat sink component found in inverters",
+    "datatype": "Integer",
+    "unit": "°C"
+  },
+  {
+    "old_key": "PVInputCurrent",
+    "new_key": "PVInA",
+    "label": "PV Input Current",
+    "description": "Input current generated from solar PV array",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "PVInputVoltage",
+    "new_key": "PVInV",
+    "label": "PV Input Voltage",
+    "description": "Input voltage from the solar PV array",
+    "datatype": "Float",
+    "unit": "V"
+  },
+  {
+    "old_key": "BatteryVoltageFromSCC",
+    "new_key": "BtVSCC",
+    "label": "Battery Voltage From SCC",
+    "description": "",
+    "datatype": "Float",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryDischargeCurrent",
+    "new_key": "BtDsA",
+    "label": "Battery Discharge Current",
+    "description": "Current being drawn from the battery",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "DeviceStatus1",
+    "new_key": "DvS1",
+    "label": "Device Status 1",
+    "description": "Shows the current operating status of the inverter",
+    "datatype": "Binary",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryVoltageOffsetForFan",
+    "new_key": "BtVFa",
+    "label": "Battery Voltage Offset For Fan",
+    "description": "Offset voltage of battery when inverter fan is on",
+    "datatype": "Integer",
+    "unit": "mV"
+  },
+  {
+    "old_key": "EEPROMVersion",
+    "new_key": "EEPROM",
+    "label": "EEPROM Version",
+    "description": "Shows the version number of the inverter's EEPROM",
+    "datatype": "Integer",
+    "unit": ""
+  },
+  {
+    "old_key": "PVChargingPower",
+    "new_key": "PVCgP",
+    "label": "PV Charging Power",
+    "description": "Power generated from solar PV array charging the battery",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "DeviceStatus2",
+    "new_key": "DvS2",
+    "label": "Device Status 2",
+    "description": "Shows the current operating status of the inverter",
+    "datatype": "Binary",
+    "unit": ""
+  },
+  {
+    "old_key": "GridCurrent",
+    "new_key": "GdA",
+    "label": "Grid Current",
+    "description": "Current of the electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Float",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACOutputCurrent",
+    "new_key": "ACOA",
+    "label": "AC Output Current",
+    "description": "Current of the AC output from the inverter",
+    "datatype": "Float",
+    "unit": "A"
+  },
+  {
+    "old_key": "BatteryRechargeVoltage",
+    "new_key": "BtRgV",
+    "label": "Battery Recharge Voltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryUnderVoltage",
+    "new_key": "BtUV",
+    "label": "Battery Under Voltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryBulkVoltage",
+    "new_key": "BtBkV",
+    "label": "Battery Bulk Voltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryFloatVoltage",
+    "new_key": "BtFlV",
+    "label": "Battery Float Voltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryType",
+    "new_key": "BtTp",
+    "label": "Battery Type",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "MaxACChargingCurrent",
+    "new_key": "MxACCgA",
+    "label": "Maximum AC Charging Current",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "MaxChargingCurrent",
+    "new_key": "MxCgA",
+    "label": "Maximum Charging Current",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "InputVoltage",
+    "new_key": "IvV",
+    "label": "Input Voltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "OutputSourcePriority",
+    "new_key": "OScPt",
+    "label": "Output Source Priority",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Chargersourcepriority",
+    "new_key": "CgScPt",
+    "label": "Charge Source Priority",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved1",
+    "new_key": "Rsv1",
+    "label": "Reserved 1",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "MachineType",
+    "new_key": "MnTp",
+    "label": "Machine Type",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Topology",
+    "new_key": "Topo",
+    "label": "Topology",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "OutputMode",
+    "new_key": "OMo",
+    "label": "Output Mode",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Batteryre-dischargeVoltage",
+    "new_key": "BtRedcgV",
+    "label": "Battery Re-discharge Voltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved2",
+    "new_key": "Rsv2",
+    "label": "Reserved 2",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved3",
+    "new_key": "Rsv3",
+    "label": "Reserved 3",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Unknown",
+    "new_key": "Unknw",
+    "label": "Unknown",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "PVLoss",
+    "new_key": "PVLs",
+    "label": "PV Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "InverterFault",
+    "new_key": "IvFlt",
+    "label": "Inverter Fault",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BusOver",
+    "new_key": "BusOv",
+    "label": "Bus Overvoltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BusUnder",
+    "new_key": "BusU",
+    "label": "Bus Undervoltage",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BusSoftFail",
+    "new_key": "BusStFail",
+    "label": "Bus Soft Fail",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "LineFail",
+    "new_key": "LnFail",
+    "label": "Line Fail",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "OPVShort",
+    "new_key": "OPVSht",
+    "label": "Open PV Short Fault",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "InverterVoltageTooLow",
+    "new_key": "IvLwV",
+    "label": "Inverter Voltage Too Low",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "InverterVoltageTooHigh",
+    "new_key": "IvHgV",
+    "label": "Inverter Voltage Too High",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "OverTemperature",
+    "new_key": "OvT",
+    "label": "Over Temperature",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "FanLocked",
+    "new_key": "FaLk",
+    "label": "Fan Locked",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryVoltageHigh",
+    "new_key": "BtHgV",
+    "label": "Battery Voltage High",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryLowAlarm",
+    "new_key": "BtLwAlm",
+    "label": "Battery Low Alarm",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved01",
+    "new_key": "Rsv01",
+    "label": "Reserved01",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryUnderShutdown",
+    "new_key": "BtUShtDw",
+    "label": "Battery Undervoltaage Shutdown",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryDerating",
+    "new_key": "BtDer",
+    "label": "Battery Derating",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Overload",
+    "new_key": "OvLd",
+    "label": "Overload",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "EepromFault",
+    "new_key": "EpromFlt",
+    "label": "EEPROM Fault",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "InverterOverCurrent",
+    "new_key": "IvOvA",
+    "label": "Inverter Overcurrent",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "InverterSoftFail",
+    "new_key": "IvStFl",
+    "label": "Inverter Soft Fail",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "SelfTestFail",
+    "new_key": "SfTestFl",
+    "label": "Self Test Fail",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "OPDCVoltageOpen",
+    "new_key": "OPDCVOp",
+    "label": "OPDC Voltage Open",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryOpen",
+    "new_key": "BtOp",
+    "label": "Battery Open",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "CurrentSensorFail",
+    "new_key": "ASenFl",
+    "label": "Current Sensor Fail",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved02",
+    "new_key": "Rsv02",
+    "label": "Reserved02",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved03",
+    "new_key": "Rsv03",
+    "label": "Reserved03",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved04",
+    "new_key": "Rsv04",
+    "label": "Reserved04",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved05",
+    "new_key": "Rsv05",
+    "label": "Reserved05",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved06",
+    "new_key": "Rsv06",
+    "label": "Reserved06",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved07",
+    "new_key": "Rsv07",
+    "label": "Reserved07",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved08",
+    "new_key": "Rsv08",
+    "label": "Reserved08",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reserved09",
+    "new_key": "Rsv09",
+    "label": "Reserved09",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "GeneratedToday",
+    "new_key": "GnT",
+    "label": "Generated Today",
+    "description": "Total energy generated today",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "GeneratedWeek",
+    "new_key": "GnW",
+    "label": "Generated Week",
+    "description": "Total energy generated in the week",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "GeneratedMonth",
+    "new_key": "GnM",
+    "label": "Generated Month",
+    "description": "Total energy generated in the month",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "GeneratedYear",
+    "new_key": "GnY",
+    "label": "Generated Year",
+    "description": "Total energy generated in the year",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedTodayOffGrid",
+    "new_key": "ConTfGd",
+    "label": "Consumed Today Off Grid",
+    "description": "Total energy consumed off grid in today",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedWeekOffGrid",
+    "new_key": "ConWfGd",
+    "label": "Consumed Week Off Grid",
+    "description": "Total energy consumed off grid in the week",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedMonthOffGrid",
+    "new_key": "ConMfGd",
+    "label": "Consumed Month Off Grid",
+    "description": "Total energy consumed off grid in the month",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedYearOffGrid",
+    "new_key": "ConYfGd",
+    "label": "Consumed Year Off Grid",
+    "description": "Total energy consumed off grid in the year",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedTodayOnGrid",
+    "new_key": "ConTOGd",
+    "label": "Consumed Today On Grid",
+    "description": "Total energy consumed on grid today",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedWeekOnGrid",
+    "new_key": "ConWOGd",
+    "label": "Consumed Week On Grid",
+    "description": "Total energy consumed on grid in the week",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedMonthOnGrid",
+    "new_key": "ConMOGd",
+    "label": "Consumed Month On Grid",
+    "description": "Total energy consumed on grid in the month",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedYearOnGrid",
+    "new_key": "ConYOGd",
+    "label": "Consumed Year On Grid",
+    "description": "Total energy consumed on grid in the year",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "PeakToday",
+    "new_key": "PkT",
+    "label": "Peak Today",
+    "description": "Peak energy generated today",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "PeakWeek",
+    "new_key": "PkW",
+    "label": "Peak Week",
+    "description": "Peak energy generated in the week",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "PeakMonth",
+    "new_key": "PkM",
+    "label": "Peak Month",
+    "description": "Peak energy generated in the month",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "PeakYear",
+    "new_key": "PkY",
+    "label": "Peak Year",
+    "description": "Peak energy generated in the year",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "OutputLoadPercent (ACOutputPowerPercentage)",
+    "new_key": "OL%",
+    "label": "Output Load Percentage",
+    "description": "Ratio of the current output load to the load carrying capacity of the inverter",
+    "datatype": "Integer",
+    "unit": "%"
+  },
+  {
+    "old_key": "PVChargingPower (SolarInputPower)",
+    "new_key": "PVCgP",
+    "label": "PV Input Power",
+    "description": "Power generated from solar PV array charging the battery",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "BatteryLowAlarm (BatteryLow)",
+    "new_key": "BtLwAlm",
+    "label": "Battery Low Alarm",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "PVVoltageHigh",
+    "new_key": "PVHgV",
+    "label": "PV Voltage High",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "BatteryLowHybridMode",
+    "new_key": "BtLwHy",
+    "label": "Battery Low Hybrid Mode",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "GridVoltageHighLoss",
+    "new_key": "GdHgV",
+    "label": "Grid Voltage High Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "GridVoltageLowLoss",
+    "new_key": "GdLwV",
+    "label": "Grid Voltage Low Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "GridFrequencyHighLoss",
+    "new_key": "GdHgF",
+    "label": "Grid Frequency High Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "GridFrequencyLowLoss",
+    "new_key": "GdLwF",
+    "label": "Grid Frequency Low Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "ACInputVoltageLoss",
+    "new_key": "GdLsV",
+    "label": "AC Input Voltage Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "ACInputFrequencyLoss",
+    "new_key": "GdLsF",
+    "label": "AC Input Frequency Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "ACInputPhaseDislocation",
+    "new_key": "GdPd",
+    "label": "AC Input Phase Dislocation",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "EPOactive",
+    "new_key": "EPO",
+    "label": "EPO Active",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "ACInputWaveLoss",
+    "new_key": "GdLsW",
+    "label": "AC Input Wave Loss",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "Reseved",
+    "new_key": "Rsv",
+    "label": "Reseved",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "MaximumBatteryDischargeCurrentInHybridMode",
+    "new_key": "MxBtDsHyA",
+    "label": "Maximum Battery Discharge Current In Hybrid Mode",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "ACInputRatedVoltage",
+    "new_key": "rGdV",
+    "label": "AC InputRated Voltage",
+    "description": "Voltage of the AC input recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACInputRatedFrequency",
+    "new_key": "rGdF",
+    "label": "AC Input Rated Frequency",
+    "description": "Frequency of the AC input recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "Hz"
+  },
+  {
+    "old_key": "ACInputRatedCurrent",
+    "new_key": "rGdA",
+    "label": "AC Input Rated Current",
+    "description": "Current of the AC input recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACOutputRatedVoltage",
+    "new_key": "rACOV",
+    "label": "AC Output Rated Voltage",
+    "description": "Voltage of the AC output recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACOutputRatedFrequency",
+    "new_key": "rACOF",
+    "label": "AC Output Rated Frequency",
+    "description": "Frequency of the AC output recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "Hz"
+  },
+  {
+    "old_key": "ACOutputRatedCurrent",
+    "new_key": "rACOA",
+    "label": "AC Output Rated Current",
+    "description": "Current of the AC output recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "MPPTRatedCurrentPerString",
+    "new_key": "rMPPTA",
+    "label": "MPPT Rated Current Per String",
+    "description": "Maximum current per string of PV modules recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "RatedBatteryVoltage",
+    "new_key": "rBtV",
+    "label": "Rated Battery Voltage",
+    "description": "Voltage of the battery recommended by manufacturer of the inverter for nominal use",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "BatteryCurrent",
+    "new_key": "BtA",
+    "label": "Battery Current",
+    "description": "The charging or discharging current of the inverter",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACInputVoltageR",
+    "new_key": "GdV1",
+    "label": "AC Input Voltage R",
+    "description": "Voltage of the first phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACInputVoltageS",
+    "new_key": "GdV2",
+    "label": "AC Input Voltage S",
+    "description": "Voltage of the second phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACInputVoltageT",
+    "new_key": "GdV3",
+    "label": "AC Input Voltage T",
+    "description": "Voltage of the third phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACInputCurrentR",
+    "new_key": "GdA1",
+    "label": "AC Input Current R",
+    "description": "Current of the first phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACInputCurrentS",
+    "new_key": "GdA2",
+    "label": "AC Input Current S",
+    "description": "Current of the second phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACInputCurrentT",
+    "new_key": "GdA3",
+    "label": "AC Input Current T",
+    "description": "Current of the third phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACOutputVoltageR",
+    "new_key": "ACOV1",
+    "label": "AC Output Voltage R",
+    "description": "Voltage of the first phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACOutputVoltageS",
+    "new_key": "ACOV2",
+    "label": "AC Output Voltage S",
+    "description": "Voltage of the second phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACOutputVoltageT",
+    "new_key": "ACOV3",
+    "label": "AC Output Voltage T",
+    "description": "Voltage of the third phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "V"
+  },
+  {
+    "old_key": "ACOutputCurrentR",
+    "new_key": "ACOA1",
+    "label": "AC Output Current R",
+    "description": "Current of the first phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACOutputCurrentS",
+    "new_key": "ACOA2",
+    "label": "AC Output Current S",
+    "description": "Current of the second phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "ACOutputCurrentT",
+    "new_key": "ACOA3",
+    "label": "AC Output Current T",
+    "description": "Current of the third phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "A"
+  },
+  {
+    "old_key": "InnerTemperature",
+    "new_key": "InT",
+    "label": "Inner Temperature",
+    "description": "The internal temperature of the inverter",
+    "datatype": "Integer",
+    "unit": "°C"
+  },
+  {
+    "old_key": "ComponentMaxTemperature",
+    "new_key": "CoMxT",
+    "label": "Component Maximum Temperature",
+    "description": "The maximum temperature of the component in the inverter",
+    "datatype": "Integer",
+    "unit": "°C"
+  },
+  {
+    "old_key": "ExternalBatteryTemperature",
+    "new_key": "ExBaT",
+    "label": "External Battery Temperature",
+    "description": "The external temperature of the battery",
+    "datatype": "Integer",
+    "unit": "°C"
+  },
+  {
+    "old_key": "BatteryPower",
+    "new_key": "BtP",
+    "label": "Battery Power",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "ACInputActivePowerR",
+    "new_key": "GdAT1",
+    "label": "AC Input Active Power R",
+    "description": "Active power of the first phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACInputActivePowerS",
+    "new_key": "GdAT2",
+    "label": "AC Input Active Power S",
+    "description": "Active power of the second phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACInputActivePowerT",
+    "new_key": "GdAT3",
+    "label": "AC Input Active Power T",
+    "description": "Active power of the third phase of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACInputTotalActivePower",
+    "new_key": "GdATt",
+    "label": "AC Input Total Active Power",
+    "description": "Total active power of electrcity supplied from distribution company (DISCO) or generator",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACOutputActivePowerR",
+    "new_key": "ACOAT1",
+    "label": "AC Output Active Power R",
+    "description": "Active power of the first phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACOutputActivePowerS",
+    "new_key": "ACOAT2",
+    "label": "AC Output Active Power S",
+    "description": "Active power of the second phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACOutputActivePowerT",
+    "new_key": "ACOAT3",
+    "label": "AC Output Active Power T",
+    "description": "Active power of the third phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACOutputTotalActivePower",
+    "new_key": "ACOATt",
+    "label": "AC Output Total Active Power",
+    "description": "Total active power of the AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "W"
+  },
+  {
+    "old_key": "ACOutputApparentPowerR",
+    "new_key": "ACOAP1",
+    "label": "AC Output Apparent Power R",
+    "description": "Apparent power of the first phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "VA"
+  },
+  {
+    "old_key": "ACOutputApparentPowerS",
+    "new_key": "ACOAP2",
+    "label": "AC Output Apparent Power S",
+    "description": "Apparent power of the second phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "VA"
+  },
+  {
+    "old_key": "ACOutputApparentPowerT",
+    "new_key": "ACOAP3",
+    "label": "AC Output Apparent Power T",
+    "description": "Apparent power of the third phase of AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "VA"
+  },
+  {
+    "old_key": "ACOutputTotalApparentPower",
+    "new_key": "ACOAPt",
+    "label": "AC Output Total Apparent Power",
+    "description": "Total active power of the AC output from the inverter",
+    "datatype": "Integer",
+    "unit": "VA"
+  },
+  {
+    "old_key": "",
+    "new_key": "PAT",
+    "label": "Power Availabilty Time",
+    "description": "The number of minutes the system has been available since the day began",
+    "datatype": "Integer",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "PAP",
+    "label": "Power Availabilty Percentage",
+    "description": "The perentage of the number of minutes the system has been available since the day began",
+    "datatype": "Integer",
+    "unit": "%"
+  },
+  {
+    "old_key": "",
+    "new_key": "ChgCycle",
+    "label": "Charge Cycle",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "Critical",
+    "label": "Battery Critical",
+    "description": "",
+    "datatype": "Boolean",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "ExptdChgCyl",
+    "label": "Expected Charge Cycle",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "FV",
+    "label": "Firmware Version",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "InstallSize",
+    "label": "Installed Capacity",
+    "description": "",
+    "datatype": "Integer",
+    "unit": "kVA"
+  },
+  {
+    "old_key": "",
+    "new_key": "InvOffBy",
+    "label": "Inverter Off Message",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "InvState",
+    "label": "Inverter State",
+    "description": "",
+    "datatype": "Switch",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "PowCon",
+    "label": "Power Control",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "PowConF",
+    "label": "Power Control Fault",
+    "description": "",
+    "datatype": "",
+    "unit": ""
+  },
+  {
+    "old_key": "",
+    "new_key": "MaxChgAlwd",
+    "label": "Maximum Charging Allowed",
+    "description": "",
+    "datatype": "",
+    "unit": "A"
+  },
+  {
+    "old_key": "",
+    "new_key": "CellMinV",
+    "label": "Minimum Cell Voltage",
+    "description": "",
+    "datatype": "",
+    "unit": "V"
+  }
+]
