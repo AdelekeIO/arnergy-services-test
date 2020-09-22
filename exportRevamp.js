@@ -2,7 +2,7 @@ const payloadDictionary = require("./payload_dictionary.json");
 const axios = require("axios");
 const fs = require("fs");
 var DeviceIds = require("./v3Data.json");
-var ID = 415580;
+var ID = 43450001;
 const moment = require("moment");
 let globalData = [],
   _LastEvaluatedKey = null;
@@ -218,24 +218,24 @@ function getTodaysData(paramss, upDate) {
   dataProcess();
 }
 async function getLastDateAndCreateParams(cb) {
-  updateDeviceList(async (resp) => {
-    console.log({ resp });
-    let newDate = {
-      from: moment(resp.LEK)
-        // .add(1, "day")
-        .format("YYYY-MM-DD"),
-      to: moment(resp.LEK)
-        // .add(1, "day")
-        .format("YYYY-MM-DD"),
-    };
-    let d = [];
-    // let newDate = moment(soy).add(index, "days").format("YYYY-MM-DD");
-    d.push(newDate);
-    console.log({ d });
+  // updateDeviceList(async (resp) => {
+  //   console.log({ resp });
+  //   let newDate = {
+  //     from: moment(resp.LEK)
+  //       // .add(1, "day")
+  //       .format("YYYY-MM-DD"),
+  //     to: moment(resp.LEK)
+  //       // .add(1, "day")
+  //       .format("YYYY-MM-DD"),
+  //   };
+  //   let d = [];
+  //   // let newDate = moment(soy).add(index, "days").format("YYYY-MM-DD");
+  //   d.push(newDate);
+  //   console.log({ d });
 
-    cb(d);
-  });
-  return;
+  //   cb(d);
+  // });
+  // return;
   var params = {
     TableName: "HourlyChart",
     // DeviceTimeStamp
@@ -254,16 +254,45 @@ async function getLastDateAndCreateParams(cb) {
   };
   await IOTHTTP.post(`/devicedata`, params, {
     headers,
-  }).then((result) => {
-    console.log({ resulet: result.data });
-    if (result.data.Count == 0 && undefined == result.data.DeviceTimeStamp) {
+  })
+    .then((result) => {
+      console.log({ resulet: result.data });
+      if (result.data.Count == 0 && undefined == result.data.DeviceTimeStamp) {
+        let newDate = {
+          from: moment()
+            .startOf("year")
+            // .add(1, "day")
+            .format("YYYY-MM-DD"),
+          to: moment()
+            .startOf("year")
+            // .add(1, "day")
+            .format("YYYY-MM-DD"),
+        };
+        let d = [];
+        // let newDate = moment(soy).add(index, "days").format("YYYY-MM-DD");
+        d.push(newDate);
+        cb(d);
+        return;
+      }
+      // if (
+      //   moment(result.data.Items[0].DeviceTimeStamp)
+      //     // .add(1, "day")
+      //     .format("YYYY-MM-DD") >= "2020-01-27"
+      // ) {
+
+      // }
+      console.log({ result: result.data.Items[0].DeviceTimeStamp });
+
+      console.log({
+        result: moment(result.data.Items[0].DeviceTimeStamp).format(
+          "YYYY-MM-DD"
+        ),
+      });
       let newDate = {
-        from: moment()
-          .startOf("year")
+        from: moment(result.data.Items[0].DeviceTimeStamp)
           // .add(1, "day")
           .format("YYYY-MM-DD"),
-        to: moment()
-          .startOf("year")
+        to: moment(result.data.Items[0].DeviceTimeStamp)
           // .add(1, "day")
           .format("YYYY-MM-DD"),
       };
@@ -272,33 +301,10 @@ async function getLastDateAndCreateParams(cb) {
       d.push(newDate);
       cb(d);
       return;
-    }
-    // if (
-    //   moment(result.data.Items[0].DeviceTimeStamp)
-    //     // .add(1, "day")
-    //     .format("YYYY-MM-DD") >= "2020-01-27"
-    // ) {
-
-    // }
-    console.log({ result: result.data.Items[0].DeviceTimeStamp });
-
-    console.log({
-      result: moment(result.data.Items[0].DeviceTimeStamp).format("YYYY-MM-DD"),
+    })
+    .catch((error) => {
+      console.log({ errorB: error.response });
     });
-    let newDate = {
-      from: moment(result.data.Items[0].DeviceTimeStamp)
-        // .add(1, "day")
-        .format("YYYY-MM-DD"),
-      to: moment(result.data.Items[0].DeviceTimeStamp)
-        // .add(1, "day")
-        .format("YYYY-MM-DD"),
-    };
-    let d = [];
-    // let newDate = moment(soy).add(index, "days").format("YYYY-MM-DD");
-    d.push(newDate);
-    cb(d);
-    return;
-  });
 }
 async function updateDeviceList(cb) {
   DeviceIds = require("./v3Data.json");
@@ -337,7 +343,7 @@ async function updateDeviceList(cb) {
       cb(cbData);
     })
     .catch((error) => {
-      console.log({ error: error.response.data });
+      console.log({ error: error.response });
     });
   return;
 }

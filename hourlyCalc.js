@@ -20,7 +20,7 @@ const payloadDictionary = require("./payload_dictionary.json");
 // const localDataExport = require("./Today.json").sort(
 //   (a, b) => moment(a["DeviceTimeStamp"]) - moment(b["DeviceTimeStamp"])
 // );
-const localDataExport = require("./connectedDevices.json").sort(
+const localDataExport = require("./expectedConnectedDevices.json").sort(
   (a, b) => moment(a["DeviceTimeStamp"]) - moment(b["DeviceTimeStamp"])
 );
 // Final Export Hourly
@@ -180,13 +180,15 @@ const processChartData = (oldData, newData) => ({
     newData["InverterData"]
   ),
   EnergyData: newData["EnergyData"],
+  test: JSON.stringify(newData),
 });
 
 var handle = async (event) => {
   // console.log("Hourly Event", JSON.stringify(event));
   // return;
   let eventPayload = event;
-
+  // console.log({ eventPayload });
+  // return;
   const getItemParam = {
     TableName: "HourlyChart",
     Key: {
@@ -202,13 +204,21 @@ var handle = async (event) => {
     eventPayload["InverterData"],
     eventPayload["ModeData"]
   );
-  // return;
+  console.log({ eventPayload });
+  let { MiscData, EnergyData } = eventPayload;
+  let { FV } = undefined == MiscData ? {} : MiscData;
+  console.log({ MiscData, EnergyData, FV });
+  console.log(FV >= "1.76");
+
   let chartDataNode = {
     DeviceID: `${eventPayload.DeviceID}`,
     Timestamp: eventPayload["Timestamp"],
-    EnergyData: transformChartData(
-      eventPayload["EnergyData"] ? eventPayload["EnergyData"] : []
-    ),
+    EnergyData:
+      FV >= "1.76"
+        ? ""
+        : transformChartData(
+            eventPayload["EnergyData"] ? eventPayload["EnergyData"] : []
+          ),
     Battery: eventPayload["BatteryData"]
       ? extractBatteryData(eventPayload["BatteryData"])
       : {},
@@ -231,10 +241,6 @@ var handle = async (event) => {
         ? oldChartDataNode["loadEnergySource"]
         : null,
       newLoadEnergySource
-    );
-
-    console.log(
-      "From Plus Computation response" + JSON.stringify(newLoadEnergySource)
     );
 
     ChartData = {
@@ -277,7 +283,6 @@ var handle = async (event) => {
     // return ChartData;
   } else {
     console.log("Hourly NOT found");
-    console.log({ newLoadEnergySource });
 
     ChartData = {
       DeviceID: `${eventPayload.DeviceID}`,
@@ -308,7 +313,7 @@ var handle = async (event) => {
   //         .format()}`
 
   TMP_DB[ky_] = ChartData;
-  // console.log({ TMP_DB });
+  console.log({ TMP_DB });
 
   return TMP_DB;
   //  console.log(
