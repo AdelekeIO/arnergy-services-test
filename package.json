@@ -13,7 +13,10 @@
     "axios": "^0.19.2",
     "convert-hrtime": "^3.0.0",
     "fs": "0.0.1-security",
-    "moment": "^2.27.0"
+    "moment": "^2.27.0",
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

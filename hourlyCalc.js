@@ -179,8 +179,11 @@ const processChartData = (oldData, newData) => ({
     oldData["InverterData"],
     newData["InverterData"]
   ),
-  EnergyData: newData["EnergyData"],
-  test: JSON.stringify(newData),
+  EnergyData:
+    Object.keys(oldData["EnergyData"]).length > 0 &&
+    oldData["EnergyData"].constructor === Object
+      ? oldData["EnergyData"]
+      : newData["EnergyData"],
 });
 
 var handle = async (event) => {
@@ -204,18 +207,20 @@ var handle = async (event) => {
     eventPayload["InverterData"],
     eventPayload["ModeData"]
   );
-  console.log({ eventPayload });
+  // console.log({ eventPayload });
   let { MiscData, EnergyData } = eventPayload;
-  let { FV } = undefined == MiscData ? {} : MiscData;
-  console.log({ MiscData, EnergyData, FV });
-  console.log(FV >= "1.76");
+  let { FV } = undefined === MiscData ? {} : MiscData;
+  EnergyData = undefined === EnergyData ? [] : EnergyData;
+  // console.log({ MiscData, EnergyData, FV });
+  // console.log(FV >= "1.76");
+  console.log({ EnergyData, FV: parseFloat(FV) });
 
   let chartDataNode = {
     DeviceID: `${eventPayload.DeviceID}`,
     Timestamp: eventPayload["Timestamp"],
     EnergyData:
-      FV >= "1.76"
-        ? ""
+      parseFloat(FV) >= 1.76
+        ? EnergyData
         : transformChartData(
             eventPayload["EnergyData"] ? eventPayload["EnergyData"] : []
           ),
@@ -226,6 +231,8 @@ var handle = async (event) => {
       eventPayload["InverterData"] ? eventPayload["InverterData"] : []
     ),
   };
+  console.log({ chartDataNode });
+
   let ky_ = `${eventPayload.DeviceID}-${moment(eventPayload["Timestamp"])
     .startOf("hour")
     .format()}`;
@@ -251,6 +258,7 @@ var handle = async (event) => {
       ...processChartData(oldChartDataNode, chartDataNode),
       loadEnergySource: loadEnergySourcePlus,
       Hour: new Date(chartDataNode.Timestamp).getHours(),
+      FV,
       LastEvaluated: eventPayload["Timestamp"],
     };
     // const getHourlyParams = {
@@ -292,8 +300,11 @@ var handle = async (event) => {
       ...processChartData(chartDataNode, chartDataNode),
       loadEnergySource: newLoadEnergySource,
       Hour: new Date(chartDataNode.Timestamp).getHours(),
+      FV,
       LastEvaluated: eventPayload["Timestamp"],
     };
+    console.log("not found" + JSON.stringifyChartData);
+
     // const getHourlyParams = {
     //   TableName: "HourlyChart",
     //   Item: ChartData
@@ -313,7 +324,7 @@ var handle = async (event) => {
   //         .format()}`
 
   TMP_DB[ky_] = ChartData;
-  console.log({ TMP_DB });
+  // console.log({ TMP_DB });
 
   return TMP_DB;
   //  console.log(
@@ -331,6 +342,8 @@ var handle = async (event) => {
 let response = [];
 try {
   localDataExport.map(async ({ payload }) => await handle(payload));
+  console.log({ hey: TMP_DB });
+  console.log({ test: TMP_DB ? true : false });
 
   fs.writeFile(
     "HourlyTodayExport.json",

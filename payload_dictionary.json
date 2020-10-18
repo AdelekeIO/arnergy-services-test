@@ -1246,5 +1246,53 @@
     "description": "",
     "datatype": "",
     "unit": "V"
+  },
+  {
+    "old_key": "ConsumedToday",
+    "new_key": "ConT",
+    "label": "Consumed Today ",
+    "description": "Total energy consumed today",
+    "datatype": "",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedMonth",
+    "new_key": "ConM",
+    "label": "Consumed Month",
+    "description": "Total energy consumed  in the month",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedYear",
+    "new_key": "ConY",
+    "label": "Consumed Year",
+    "description": "Total energy consumed on grid in the year",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "ConsumedAllTime",
+    "new_key": "ConAT",
+    "label": "Consumed All TIme",
+    "description": "Total energy consumed All time",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "PeekAllTime",
+    "new_key": "PkAT",
+    "label": "Peak All time",
+    "description": "Peak energy generated All Time",
+    "datatype": "Integer",
+    "unit": "Wh"
+  },
+  {
+    "old_key": "GeneratedAllTime",
+    "new_key": "GnAT",
+    "label": "Generated All time",
+    "description": "Total energy generated All Time",
+    "datatype": "Integer",
+    "unit": "Wh"
   }
 ]
