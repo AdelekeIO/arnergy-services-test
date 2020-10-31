@@ -7,77 +7,77 @@ const User = db.define(
     id: {
       type: Sequelize.STRING,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
     },
     firstname: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     email: {
       type: Sequelize.STRING,
       allowNull: false,
-      validate: { isEmail: true }
+      validate: { isEmail: true },
     },
     roletype: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     lastname: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
 
     dateofbirth: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     phonenumber: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     gender: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     wallet: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     createdat: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     updatedat: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     realm: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     username: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     password: {
       type: Sequelize.STRING,
-      allowNull: false
+      allowNull: false,
     },
     emailverified: {
       type: Sequelize.STRING,
       allowNull: false,
-      validate: { isEmail: true }
+      validate: { isEmail: true },
     },
     verificationtoken: {
       type: Sequelize.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   },
   {
     tableName: "user",
     schema: "public",
     createdAt: "createdat",
-    updatedAt: "updatedat"
+    updatedAt: "updatedat",
   }
 );
 

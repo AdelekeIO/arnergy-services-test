@@ -1,13 +1,14 @@
 const Sequelize = require("sequelize");
 const db = require("../config/db");
 
-const User = db.define(
+const Warningreport = db.define(
   "warningreport",
   {
     id: {
       type: Sequelize.BIGINT,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
     },
     deviceid: {
       type: Sequelize.STRING,
@@ -16,7 +17,6 @@ const User = db.define(
     fault: {
       type: Sequelize.STRING,
       allowNull: false,
-      validate: { isEmail: true },
     },
     starttime: {
       type: Sequelize.STRING,
@@ -39,9 +39,9 @@ const User = db.define(
   {
     tableName: "warningreport",
     schema: "public",
-    // createdAt: "createdat",
-    // updatedAt: "updatedat",
+
+    timestamps: false,
   }
 );
 
-module.exports = User;
+module.exports = Warningreport;

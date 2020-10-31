@@ -8,6 +8,7 @@ function getSystemSuggestion(quantityTmp) {
   let suggstn = "arnergy5000";
   let suggSize = "5kVA";
   let descr = "2 Batteries + 12 panels on 1 Arnergy 5000 cabinet";
+  console.log({ quantityTmp });
 
   if (quantityTmp <= 0.6) {
     suggstn = "arnergy5000x";
@@ -15,6 +16,8 @@ function getSystemSuggestion(quantityTmp) {
     descr = "1 Battery + 6 panels on 1 Arnergy 5000 cabinet";
   } else {
     quantityTmp = Math.floor(quantityTmp);
+    console.log({ quantityTmp });
+
     if (quantityTmp == 1) {
       suggstn = "arnergy5000";
       suggSize = "5kVA";
@@ -54,6 +57,10 @@ function getSystemSuggestion(quantityTmp) {
       suggstn = "arnergy45000";
       suggSize = "45kVA";
       descr = "";
+    } else {
+      suggstn = "Contact Technical Team";
+      suggSize = "Customized System";
+      descr = "Contact Technical Team";
     }
   }
   return {

@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize");
+// console.log({ Sequelize: Sequelize});
 
 module.exports = new Sequelize(
   "solarbase",
@@ -10,11 +11,11 @@ module.exports = new Sequelize(
     host: "solarbase.czwfrshabs2k.us-west-2.rds.amazonaws.com",
 
     pool: {
-      max: 5,
+      max: 1,
       min: 0,
       acquire: 30000,
-      idle: 10000
-    }
+      idle: 100,
+    },
     // logging: console.log, // Default, displays the first parameter of the log function call
     // logging: (...msg) => console.log(msg), // Displays all log function call parameters
     // logging: false // Disables logging
