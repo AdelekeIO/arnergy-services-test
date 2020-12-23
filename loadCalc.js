@@ -15,7 +15,7 @@ function getSystemSuggestion(quantityTmp) {
     suggSize = "5kVA";
     descr = "1 Battery + 6 panels on 1 Arnergy 5000 cabinet";
   } else {
-    quantityTmp = Math.floor(quantityTmp);
+    quantityTmp = Math.round(quantityTmp);
     console.log({ quantityTmp });
 
     if (quantityTmp == 1) {
@@ -71,6 +71,8 @@ function getSystemSuggestion(quantityTmp) {
 }
 
 let loadbreakdwn = totalKeys.reduce((acc, x) => {
+  console.log({ acc_edit: acc });
+
   return (acc = {
     ...acc,
     [`${x}`]: {

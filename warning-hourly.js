@@ -216,6 +216,13 @@ const getTodayData = () => {
     Limit: 2000,
     ScanIndexForward: true,
   };
+  console.log({ start: moment().startOf("hour").toDate() });
+  console.log({ plus10: moment().startOf("hour").add(10, "minutes").toDate() });
+  console.log({
+    Test10: moment() > moment().startOf("hour").add(20, "minutes").toDate(),
+  });
+
+  return;
   IOTHTTP.post(`/devicedata/${LastEvaluatedKey ? "scan" : ""}`, data)
     .then((resp) => {
       let warnings = resp.data.Items;
@@ -232,6 +239,8 @@ let samplePayload = {
     PVLs: "1",
   },
 };
+
+const handler = () => {};
 getTodayData();
 // updateWarning(samplePayload);
 // clearWarning();

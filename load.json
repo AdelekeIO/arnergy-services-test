@@ -1,4 +1,4 @@
 {
-  "Laptop": { "quantity": 23, "wattage": 1370, "hours_per_day": 6 },
-  "Television LED": { "quantity": 23, "wattage": 69, "hours_per_day": 7 }
+  "Laptop": { "quantity": 4, "wattage": 75, "hours_per_day": 5 },
+  "Television LED": { "quantity": 8, "wattage": 1118.55, "hours_per_day": 2 }
 }
